@@ -1,0 +1,7 @@
+- analisi dei requisiti
+- modello dati della piattaforma
+- breve documentazione del progetto
+- sistema rest
+- frontend bootstrap custom da zero
+- deploy su heroku/pythonanywhere
+- backend python|django basato su postgreSQL
