@@ -1,6 +1,4 @@
-- datamodel
 - routing system
 - apirest
-- analisi dei requisiti
-- frontend bootstrap custom da zero
 - docker deploy
+- script in dockerfile that create database in postgres

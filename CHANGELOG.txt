@@ -4,6 +4,7 @@ Docker
 # add psycopg2
 --------------------------------------------------
 
+
 Released: 02/12/2017 h13:00
 Docker
 # dockerized project correctly
@@ -11,9 +12,19 @@ Docker
 # add application to django project
 --------------------------------------------------
 
+
 Released: 02/12/2017 h15:45
-Docker
+Fabric support
 # fabfile support development
 # configuration djangorestframework, postgresql, create local db, templates and static dir
+--------------------------------------------------
+
+
+Released: 02/12/2017 h15:45
+Datamodeling
+# simple datamodel
+# settings updated
+# django-grappelli templates
+# updated requirements
 --------------------------------------------------
 
