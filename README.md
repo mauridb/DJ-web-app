@@ -10,10 +10,11 @@ A little explanation of the git flow of the project:
 |*hotfixing*| is the branch where we fix bugs and at the end merge to develop branch and master branch with tag
 
 
-- analisi dei requisiti
-- modello dati della piattaforma
-- breve documentazione del progetto
-- sistema rest
-- frontend bootstrap custom da zero
-- deploy su heroku/pythonanywhere
-- backend python|django basato su postgreSQL
+## Requirements
+- Python 2.7+
+- PostgreSQL
+
+```
+$ virtualenv venv
+$ pip install -r requirements/local/local_requirements.txt
+```
