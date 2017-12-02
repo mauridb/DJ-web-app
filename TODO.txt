@@ -1,10 +1,10 @@
-- docker dev
+- dockerize project
+# creare app dashboard
+# creare app backend
 - datamodel
 - project configuration
 - routing system
 - apirest
-- creare app dashboard
-- creare app backend
 - analisi dei requisiti
 - modello dati della piattaforma
 - breve documentazione del progetto
