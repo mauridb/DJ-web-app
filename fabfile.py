@@ -59,3 +59,4 @@ def bug_fixing(hotfix, tag):
     local('git branch -d {}'.format(hotfix))
     local('git checkout develop')
     local('git pull origin master')
+    local('git push origin develop')
