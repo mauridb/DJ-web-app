@@ -40,7 +40,7 @@ def release(tag):
     local('git merge -m "merge with release" release')
     local('git push origin --tags master')
     local('git checkout develop')
-    local('git git pull origin master')
+    local('git pull origin master')
 
 
 def closed_fix(commit_message):
