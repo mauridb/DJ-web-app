@@ -1,6 +1,3 @@
-- dockerize project
-# creare app dashboard
-# creare app backend
 - datamodel
 - project configuration
 - routing system
