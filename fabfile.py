@@ -15,6 +15,7 @@ def migrate():
     local("python manage.py migrate")
 
 
+# STEP 1
 # fab closed_feature:'FIX: little bug fixing'
 def closed_feature(commit_message):
     local("git add .")
@@ -23,6 +24,7 @@ def closed_feature(commit_message):
     local("git push")
 
 
+# STEP 2
 # fab prepare_develop:'dockerfile'
 def prepare_develop(myfeature):
     local('git checkout develop')
@@ -31,6 +33,7 @@ def prepare_develop(myfeature):
     local('git branch -d {}'.format(myfeature))
 
 
+# STEP 3
 def release(tag):
     local('git checkout release')
     local('git merge -m "RELEASED" develop')
@@ -43,6 +46,7 @@ def release(tag):
     local('git pull origin master')
 
 
+# STEP 4 if true
 def closed_fix(commit_message):
     local("git add .")
     local("git commit -m '{}'".format(commit_message))
@@ -50,6 +54,7 @@ def closed_fix(commit_message):
     local("git push")
 
 
+# STEP 5 if true
 # fab bug_fixing:hotfix='login',tag='1.0.2'
 def bug_fixing(hotfix, tag):
     local('git checkout master')
