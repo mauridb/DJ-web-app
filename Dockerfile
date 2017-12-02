@@ -8,11 +8,11 @@ RUN apt-get install -y python3-pip
 RUN apt-get install -y git
 
 # create application dir
-WORKDIR /app/src/
+WORKDIR /app/
 
 # install project dependencies
-COPY requirements/production/prod_requirements.txt prod_requirements.txt
-RUN pip3 install -r prod_requirements.txt
+RUN git clone -b dockerfile https://github.com/mauridb/DJ-web-app.git
+RUN pip3 install -r DJ-web-app/requirements/production/prod_requirements.txt
 
 
 # Make port available
