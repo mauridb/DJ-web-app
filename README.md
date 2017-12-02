@@ -7,7 +7,7 @@ A little explanation of the git flow of the project:
 |*feature*| is opened by developer for each feature in backlog and takes the name of the feature
 |**release**| is the branch for production
 |**master** | follow release branch with tag
-|*hotfixing*| is the branch where we fix bugs and at the end merge to develop branch and master branch with tag
+|*hotfixing*| _branched from master_ is the branch where we fix bugs and at the end merge to develop branch and master branch with tag
 
 
 ## Requirements
