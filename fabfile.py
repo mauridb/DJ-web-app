@@ -29,7 +29,6 @@ def prepare_develop(myfeature):
     local('git merge -m "CLOSED-FEATURE-{}" {}'.format(myfeature, myfeature))
     local('git push origin develop')
     local('git branch -d {}'.format(myfeature))
-    # local('git push origin --delete origin/{}'.format(myfeature))
 
 
 def release(tag):
