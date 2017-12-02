@@ -1,3 +1,9 @@
+# virtual environment
 venv
+
+# static file
+static
+
+# other stuffs
 *pyc
 .idea

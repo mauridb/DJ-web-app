@@ -1,13 +1,19 @@
 Released: 02/12/2017 h10:30
 Docker
-- dockerized project
-- add psycopg2
+# dockerized project
+# add psycopg2
 --------------------------------------------------
 
 Released: 02/12/2017 h13:00
 Docker
-- dockerized project correctly
-- add psycopg2
-- add application to django project
+# dockerized project correctly
+# add psycopg2
+# add application to django project
+--------------------------------------------------
+
+Released: 02/12/2017 h15:45
+Docker
+# fabfile support development
+# configuration djangorestframework, postgresql, create local db, templates and static dir
 --------------------------------------------------
 

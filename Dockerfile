@@ -11,7 +11,7 @@ RUN apt-get install -y git
 WORKDIR /app/
 
 # install project dependencies
-RUN git clone -b develop https://github.com/mauridb/DJ-web-app.git
+RUN git clone -b release https://github.com/mauridb/DJ-web-app.git
 RUN pip3 install -r DJ-web-app/requirements/production/prod_requirements.txt
 
 WORKDIR DJ-web-app/
