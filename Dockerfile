@@ -11,9 +11,16 @@ RUN apt-get install -y git
 WORKDIR /app/
 
 # install project dependencies
-RUN git clone -b dockerfile https://github.com/mauridb/DJ-web-app.git
+RUN git clone -b develop https://github.com/mauridb/DJ-web-app.git
 RUN pip3 install -r DJ-web-app/requirements/production/prod_requirements.txt
 
+WORKDIR DJ-web-app/
+
+# when you pass commands to the container
+ENTRYPOINT ["python3"]
+
+# launch below command when run container
+CMD ["manage.py", "runserver", "0.0.0.0:8000"]
 
 # Make port available
-EXPOSE 8080
+EXPOSE 8000

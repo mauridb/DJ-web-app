@@ -11,10 +11,17 @@ A little explanation of the git flow of the project:
 
 
 ## Requirements
-- Python 2.7+
-- PostgreSQL
+- Docker
 
+### Docker image download
+```bash
+$ docker pull mauridb/dj-web-app:latest
 ```
-$ virtualenv venv
-$ pip install -r requirements/local/local_requirements.txt
+
+### Run docker image
+```bash
+$ docker run -p 8000:8000 mauridb/dj-web-app:latest 
 ```
+
+
+"Yeah, it's alive visit http://localhost:8000/, enjoy!"
