@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-sleep 10
-python manage.py makemigrations
-python manage.py migrate
+eval "sleep 10"
+eval "python manage.py makemigrations"
+eval "python manage.py migrate"
