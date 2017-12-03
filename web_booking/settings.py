@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'web_booking',
         'USER': 'postgres',
         'PASSWORD': 'ciao1234',
-        'HOST': 'postgres',
+        'HOST': 'db',
         # 'HOST': 'localhost', # local config
         'PORT': '5432',
     }
