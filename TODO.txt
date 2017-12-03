@@ -1,5 +1,4 @@
 - routing system
-- docker deploy
 - script in dockerfile that create database in postgres
 - angular FE application
 - edit planning of course

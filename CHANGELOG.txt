@@ -58,3 +58,12 @@ Apirest system
 #UDPATE  @/api/v1/courses/<id_course>/update		--> modifica del singolo course
 #DELETE  @/api/v1/courses/<id_course>/delete		--> elimina il singolo course
 --------------------------------------------------
+
+Released: 03/12/2017 h22:00
+Deploy docker
+# dockerfile
+# docker-compose
+# switch dockerfile python version from 3 to 2
+--------------------------------------------------
+
+

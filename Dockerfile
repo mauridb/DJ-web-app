@@ -3,7 +3,7 @@ FROM ubuntu:latest
 
 # commands to run to install package for the image
 RUN apt-get update -y
-RUN apt-get install -y python-pip
+RUN apt-get install -y python-pip && pip install --upgrade pip
 RUN apt-get install -y git
 
 
