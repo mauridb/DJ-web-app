@@ -67,3 +67,10 @@ Deploy docker
 --------------------------------------------------
 
 
+Released: 03/12/2017 h22:00
+Deploy docker
+# docker-compose improvements
+# create db at start
+# start.sh script
+--------------------------------------------------
+
