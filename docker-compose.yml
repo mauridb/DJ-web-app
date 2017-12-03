@@ -15,7 +15,7 @@ services:
 
   web:
     build: .
-    command: /start.sh
+    command: ./migrate.sh
     ports:
       - "8000:8000"
     depends_on:
