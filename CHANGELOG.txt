@@ -20,7 +20,7 @@ Fabric support
 --------------------------------------------------
 
 
-Released: 02/12/2017 h15:45
+Released: 02/12/2017 h17:45
 Datamodeling
 # simple datamodel
 # settings updated
@@ -28,3 +28,33 @@ Datamodeling
 # updated requirements
 --------------------------------------------------
 
+
+Released: 03/12/2017 h09:25
+Apirest system
+#GET     @/api/v1/users					--> list di tutti gli utenti della piattaforma
+#POST    @/api/v1/users/add				--> crea un nuovo utente
+#GET     @/api/v1/users/<id_user>			--> dettaglio singolo utente
+#UDPATE  @/api/v1/users/<id_user>/update			--> modifica del singolo utente
+#DELETE  @/api/v1/users/<id_user>/delete			--> elimina il singolo utente
+
+
+#GET     @/api/v1/customers				--> list di tutti i customer della piattaforma
+#POST    @/api/v1/customers/add				--> crea un nuovo customer
+#GET     @/api/v1/customers/<id_customer>			--> dettaglio singolo customer
+#UDPATE  @/api/v1/customers/<id_customer>/update		--> modifica del singolo customer
+#DELETE  @/api/v1/customers/<id_customer>/delete		--> elimina il singolo customer
+
+
+#GET     @/api/v1/lectures				--> list di tutti i lecture della piattaforma
+#POST    @/api/v1/lectures/add				--> crea un nuovo lecture
+#GET     @/api/v1/lectures/<id_lecture>			--> dettaglio singolo lecture
+#UDPATE  @/api/v1/lectures/<id_lecture>/update		--> modifica del singolo lecture
+#DELETE  @/api/v1/lectures/<id_lecture>/delete		--> elimina il singolo lecture
+
+
+#GET     @/api/v1/courses				--> list di tutti i course della piattaforma
+#POST    @/api/v1/courses/add				--> crea un nuovo course
+#GET     @/api/v1/courses/<id_course>			--> dettaglio singolo course
+#UDPATE  @/api/v1/courses/<id_course>/update		--> modifica del singolo course
+#DELETE  @/api/v1/courses/<id_course>/delete		--> elimina il singolo course
+--------------------------------------------------

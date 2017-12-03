@@ -1,4 +1,14 @@
 - routing system
-- apirest
 - docker deploy
 - script in dockerfile that create database in postgres
+- angular FE application
+- edit planning of course
+- number of customers per lectures
+- news in the dashboard page
+- lock/unlock undesired customer
+- user booking following type deal
+- user dismissing lecture
+- lock customer(24h)
+- dismiss == 2 customer.locked(default=False) = True
+- cancel lecture (at least 2hour ago of lecture.started_at) if not 3 customer.type_customer == alumn < 3
+

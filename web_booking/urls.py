@@ -17,7 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+
+    # Administration
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
+
+    # API rest
+    url(r'^api/', include('backend.urls')),
+
 ]
 
