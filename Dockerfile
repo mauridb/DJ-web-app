@@ -17,11 +17,13 @@ RUN pip install -r DJ-web-app/requirements/production/prod_requirements.txt
 
 WORKDIR DJ-web-app/
 
+RUN sleep 10
+
 # when you pass commands to the container
 ENTRYPOINT ["python"]
 
 # launch below command when run container
-CMD ["manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["manage.py", "migrate", "&&", "python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 # Make port available
 #EXPOSE 8000

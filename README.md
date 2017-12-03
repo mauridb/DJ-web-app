@@ -15,18 +15,24 @@ A little explanation of the git flow of the project:
 
 ## Requirements
 - Docker
+- docker-compose
 
-### Docker image download
+### Docker build images and run
 ```bash
-$ docker pull mauridb/dj-web-app:latest
+$ docker-compose build
+$ docker-compose up
 ```
 
-### Run docker image
+### Create database
 ```bash
-$ docker run -p 8000:8000 mauridb/dj-web-app:latest 
+$ docker-compose exec web python manage.py makemigrations
+$ docker-compose exec web python manage.py migrate
 ```
 
-
+### Create superuser
+```bash
+$ docker-compose exec web python manage.py createsuperuser
+```
 
 
 "Yeah, it's alive visit http://localhost:8000/, enjoy! Feel free to contact me in pvt"
