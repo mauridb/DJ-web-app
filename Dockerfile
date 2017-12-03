@@ -23,7 +23,7 @@ RUN sleep 10
 ENTRYPOINT ["python"]
 
 # launch below command when run container
-CMD ["manage.py", "migrate", "&&", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["manage.py", "runserver", "0.0.0.0:8000"]
 
 # Make port available
 #EXPOSE 8000
