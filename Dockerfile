@@ -18,8 +18,6 @@ RUN pip3 install -r DJ-web-app/requirements/production/prod_requirements.txt
 
 WORKDIR DJ-web-app/
 
-COPY ./init.sql /app/DJ-web-app/
-
 # when you pass commands to the container
 ENTRYPOINT ["python3"]
 

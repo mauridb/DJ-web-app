@@ -18,7 +18,7 @@ class Course(models.Model):
 
 class Customer(models.Model):
     web_user = models.OneToOneField(User, on_delete=models.CASCADE, blank=False, null=False)
-    course = models.ForeignKey(Course, on_delete=models.PROTECT, blank=True, null=True)
+    course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, blank=True, null=True)
 
     def __str__(self):
         return "%s %s" % (self.web_user.first_name, self.web_user.last_name)
