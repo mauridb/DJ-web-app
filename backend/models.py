@@ -25,7 +25,7 @@ class Customer(models.Model):
 
 
 class Lecture(models.Model):
-    course = models.ForeignKey(Course, blank=False, null=False)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, blank=False, null=False)
     guest = models.CharField(max_length=100, blank=False, null=False)
     theme = models.CharField(max_length=100, blank=False, null=False)
     description = models.TextField(max_length=500, blank=True, null=True)
