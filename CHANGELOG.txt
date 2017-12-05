@@ -74,3 +74,11 @@ Deploy docker
 # start.sh script
 --------------------------------------------------
 
+
+Released: 06/12/2017 h00:36
+Frontend Application
+# FE application
+# boostrap
+# templatetags
+--------------------------------------------------
+

@@ -19,8 +19,11 @@ from fe_dashboard import views
 
 urlpatterns = [
 
-    # User frontend
+    # Welcome page
     url(r'^$', views.home, name='home'),
+
+    # User Frontend
+    url(r'^web/', include('fe_dashboard.urls', namespace='web')),
 
     # Administration
     url(r'^grappelli/', include('grappelli.urls')),

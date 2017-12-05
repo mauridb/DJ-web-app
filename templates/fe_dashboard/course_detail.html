@@ -1,0 +1,12 @@
+{% extends "fe_dashboard/_layout.html" %}
+
+{% block body_content %}
+<h1>{{ course.name  }}</h1>
+<hr>
+<h3 class="muted">Argument: <small>{{ course.argument }}</small></h3>
+<p>{{ course.description }}</p>
+<p><strong>Tags: </strong><small>#Python #Django #Git #MongoDB</small></p>
+<p><strong>Date start: </strong><small>{{ course.started_at }}</small> <strong>Date end: </strong><small>{{ course.ended_at }}</small></p>
+<p><strong>Teacher: </strong> <i>{{ course.name }}</i></p>
+
+{% endblock %}
