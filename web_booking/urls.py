@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from fe_dashboard import views
 
 urlpatterns = [
+
+    # User frontend
+    url(r'^$', views.home, name='home'),
 
     # Administration
     url(r'^grappelli/', include('grappelli.urls')),

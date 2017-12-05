@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'backend',
+    'fe_dashboard',
     'rest_framework',
 ]
 
@@ -84,8 +85,8 @@ DATABASES = {
         'NAME': 'web_booking',
         'USER': 'postgres',
         'PASSWORD': 'ciao1234',
-        'HOST': 'db',
-        # 'HOST': 'localhost', # local config
+        # 'HOST': 'db',  # prod docker config
+        'HOST': 'localhost',  # local config
         'PORT': '5432',
     }
 }
