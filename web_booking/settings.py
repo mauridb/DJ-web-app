@@ -151,3 +151,10 @@ REST_FRAMEWORK = {
 DATETIME_INPUT_FORMATS = [
     '%Y-%m-%d %H:%M:%S',  # '2006-10-25 14:30:59'
 ]
+
+CUSTOMER_ROLE_OPTIONS = (
+    ('admin', 'admin'),
+    ('teacher', 'teacher'),
+    ('customer', 'customer'),
+    ('user', 'user'),
+)

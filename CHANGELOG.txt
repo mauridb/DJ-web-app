@@ -80,5 +80,8 @@ Frontend Application
 # FE application
 # boostrap
 # templatetags
+# edit settings
+# small edit db
+# left sidebar added buttons
 --------------------------------------------------
 

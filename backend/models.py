@@ -19,6 +19,7 @@ class Course(models.Model):
 class Customer(models.Model):
     web_user = models.OneToOneField(User, on_delete=models.CASCADE, blank=False, null=False)
     course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, blank=True, null=True)
+    role = models.CharField(max_length=50, choices=CUSTOMER_ROLE_OPTIONS, blank=False, null=False)
 
     def __str__(self):
         return "%s %s" % (self.web_user.first_name, self.web_user.last_name)
