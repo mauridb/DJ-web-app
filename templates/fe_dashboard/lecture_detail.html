@@ -8,5 +8,16 @@
 <p><strong>Tags: </strong><small>#Python #Django #Git #MongoDB</small></p>
 <p><strong>Date: </strong><small>{{ lecture.lecture_date }}</small> <strong>Duration: </strong><small>{{ lecture.duration }}/h</small></p>
 <p><strong>Teacher: </strong> <i>{{ lecture.guest }}</i></p>
-
+<div style="display: inline-block;">
+    <form action="/web/lectures/{{lecture.pk}}/booking/" method="post" name="bookLecture">
+        {% csrf_token %}
+        <input type="submit" name="booking" class="btn btn-primary" value="Booking">
+    </form>
+</div>
+<div style="display: inline-block;">
+    <form action="/web/lectures/{{lecture.pk}}/booking/" method="post" name="dismissLecture">
+        {% csrf_token %}
+        <input type="submit" name="dismiss" class="btn btn-warning" value="Dismiss">
+    </form>
+</div>
 {% endblock %}

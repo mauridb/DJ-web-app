@@ -94,3 +94,10 @@ Frontend view lecture, course
 # modal
 --------------------------------------------------
 
+
+Released: 09/12/2017 h12:48
+edit datamodel
+# booking
+# subscribtion
+--------------------------------------------------
+

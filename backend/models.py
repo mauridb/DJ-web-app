@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import User
 
 from web_booking.settings import CUSTOMER_ROLE_OPTIONS
@@ -14,6 +15,10 @@ class Course(models.Model):
     started_at = models.DateTimeField()
     ended_at = models.DateTimeField()
 
+    @property
+    def count_customer(self):
+        return self.customer_set.all().count()
+
     def __str__(self):
         return "%s" % self.name
 
@@ -22,6 +27,7 @@ class Subscription(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False)
     price = models.DecimalField(max_digits=7, decimal_places=2, blank=False, null=True)
     description = models.TextField(max_length=500, blank=True, null=True)
+    time_booking = models.IntegerField()
 
     def __str__(self):
         return "{}".format(self.name)
@@ -32,6 +38,10 @@ class Customer(models.Model):
     course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, blank=True, null=True)
     subscription = models.ForeignKey(Subscription, blank=True, null=True)
     role = models.CharField(max_length=50, choices=CUSTOMER_ROLE_OPTIONS, blank=False, null=False, default='user')
+    allow_booking = models.BooleanField(default=True)
+    count_disclaimer = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(5)])
+    disable_date = models.DateTimeField(blank=True, null=True)
+    enable_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return "%s %s" % (self.web_user.first_name, self.web_user.last_name)
