@@ -86,7 +86,7 @@ Frontend Application
 --------------------------------------------------
 
 
-Released: 06/12/2017 h00:36
+Released: 09/12/2017 h12:48
 Frontend view lecture, course
 # routing system
 # left sidebar menu
