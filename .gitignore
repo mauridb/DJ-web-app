@@ -4,6 +4,9 @@ venv
 # static file
 static
 
+# database sqlite
+db.sqlite3
+
 # other stuffs
 *pyc
 .idea

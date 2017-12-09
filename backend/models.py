@@ -18,9 +18,19 @@ class Course(models.Model):
         return "%s" % self.name
 
 
+class Subscription(models.Model):
+    name = models.CharField(max_length=100, blank=False, null=False)
+    price = models.DecimalField(max_digits=7, decimal_places=2, blank=False, null=True)
+    description = models.TextField(max_length=500, blank=True, null=True)
+
+    def __str__(self):
+        return "{}".format(self.name)
+
+
 class Customer(models.Model):
     web_user = models.OneToOneField(User, on_delete=models.CASCADE, blank=False, null=False)
     course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, blank=True, null=True)
+    subscription = models.ForeignKey(Subscription, blank=True, null=True)
     role = models.CharField(max_length=50, choices=CUSTOMER_ROLE_OPTIONS, blank=False, null=False, default='user')
 
     def __str__(self):
@@ -29,7 +39,7 @@ class Customer(models.Model):
 
 class Lecture(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, blank=False, null=False)
-    guest = models.CharField(max_length=100, blank=False, null=False)
+    guest = models.ForeignKey(Customer, on_delete=models.DO_NOTHING, blank=False, null=False)
     theme = models.CharField(max_length=100, blank=False, null=False)
     description = models.TextField(max_length=500, blank=True, null=True)
     duration = models.DecimalField(decimal_places=2, max_digits=3, blank=True, null=True)  # in hours
@@ -37,3 +47,12 @@ class Lecture(models.Model):
 
     def __str__(self):
         return "%s" % self.theme
+
+
+class Booking(models.Model):
+    customer = models.OneToOneField(Customer, on_delete=models.DO_NOTHING, blank=False, null=False)
+    lecture = models.OneToOneField(Lecture, on_delete=models.DO_NOTHING, blank=False, null=False)
+    booking_date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "{}_{}_{}_{}".format(self.pk, self.customer, self.lecture, self.booking_date)
