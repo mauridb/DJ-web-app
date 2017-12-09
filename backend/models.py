@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 
+from web_booking.settings import CUSTOMER_ROLE_OPTIONS
+
 
 class Course(models.Model):
     name = models.CharField(max_length=100, blank=False, null=True)
@@ -19,7 +21,7 @@ class Course(models.Model):
 class Customer(models.Model):
     web_user = models.OneToOneField(User, on_delete=models.CASCADE, blank=False, null=False)
     course = models.ForeignKey(Course, on_delete=models.DO_NOTHING, blank=True, null=True)
-    role = models.CharField(max_length=50, choices=CUSTOMER_ROLE_OPTIONS, blank=False, null=False)
+    role = models.CharField(max_length=50, choices=CUSTOMER_ROLE_OPTIONS, blank=False, null=False, default='user')
 
     def __str__(self):
         return "%s %s" % (self.web_user.first_name, self.web_user.last_name)
@@ -31,7 +33,7 @@ class Lecture(models.Model):
     theme = models.CharField(max_length=100, blank=False, null=False)
     description = models.TextField(max_length=500, blank=True, null=True)
     duration = models.DecimalField(decimal_places=2, max_digits=3, blank=True, null=True)  # in hours
-    course_date = models.DateTimeField()
+    lecture_date = models.DateTimeField()
 
     def __str__(self):
         return "%s" % self.theme

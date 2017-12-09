@@ -28,12 +28,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Web Booking!</a>
+                    <a class="navbar-brand" href="#">Web Booking</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Course</a></li>
-                        <li><a href="#">Lecture</a></li>
+						<li><a href="{% url 'web:list-course' %}">Course</a></li>
+                        <li><a href="{% url 'web:list-lecture' %}">Lecture</a></li>
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Help</a></li>
                     </ul>

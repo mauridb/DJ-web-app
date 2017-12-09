@@ -85,3 +85,12 @@ Frontend Application
 # left sidebar added buttons
 --------------------------------------------------
 
+
+Released: 06/12/2017 h00:36
+Frontend view lecture, course
+# routing system
+# left sidebar menu
+# link sidebar menu
+# modal
+--------------------------------------------------
+

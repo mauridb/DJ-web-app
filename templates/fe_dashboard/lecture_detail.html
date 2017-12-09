@@ -1,0 +1,12 @@
+{% extends "fe_dashboard/_layout.html" %}
+
+{% block body_content %}
+<h1>{{ lecture.theme }}</h1>
+<hr>
+<h3 class="muted">Theme: <small>{{ lecture.theme }}</small></h3>
+<p>{{ lecture.description }}</p>
+<p><strong>Tags: </strong><small>#Python #Django #Git #MongoDB</small></p>
+<p><strong>Date: </strong><small>{{ lecture.lecture_date }}</small> <strong>Duration: </strong><small>{{ lecture.duration }}/h</small></p>
+<p><strong>Teacher: </strong> <i>{{ lecture.guest }}</i></p>
+
+{% endblock %}

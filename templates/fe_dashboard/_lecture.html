@@ -1,0 +1,7 @@
+<div class="col-xs-6 col-sm-3 placeholder">
+	<a href="{% url 'web:detail-lecture' lecture.pk %}">
+		<i class="avatar avatar-lg avatar-color-{{ num }} avatar-letter-{{ lecture.theme.0|lower }} rounded"></i>
+		<h4>{{ lecture.theme }}</h4>
+		<span class="text-muted">{{ lecture.theme }} - {{ lecture.guest }} </span>
+	</a>
+</div>

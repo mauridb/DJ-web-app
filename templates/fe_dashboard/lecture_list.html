@@ -1,6 +1,6 @@
 {% extends "fe_dashboard/_layout.html" %}
 {% load static from staticfiles %}
-{% load course_tags %}
+{% load lecture_tags %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/icons.css' %}">
@@ -9,12 +9,11 @@
 {% block body_content %}
 <h1 class="page-header">Dashboard [<small>{{request.user.first_name|title}} {{request.user.last_name|title}}</small>]</h1>
 <div>
-	<h2>COURSES</h2>
+	<h2>LECTURES</h2>
 </div>
 <div class="row placeholders">
-
-	{% for course in courses %}
-		{% course_avatar course %}
+	{% for lecture in lectures %}
+		{% lecture_avatar lecture %}
 	{% endfor %}
 </div>
 {% endblock %}

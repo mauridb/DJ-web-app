@@ -9,8 +9,113 @@
 	<li><a href="#">Export</a></li>
 </ul>
 <ul class="nav nav-sidebar">
-	<li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add new course</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add new lesson</a></li>
-	<li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add new customer</a></li>
+	<li><a href="#" data-toggle="modal" data-target="#myCourse" data-backdrop="false"><span class="glyphicon glyphicon-plus"></span> Add new Course</a></li>
+	<li><a href="#" data-toggle="modal" data-target="#myLecture" data-backdrop="false"><span class="glyphicon glyphicon-plus"></span> Add new Lecture</a></li>
 </ul>
+
+<!-- Modal Course -->
+<div class="modal fade" id="myCourse" role="dialog">
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content" style="margin-top: 60px;">
+	<div class="modal-header">
+	  <button type="button" class="close" data-dismiss="modal">&times;</button>
+	  <h4 class="modal-title">Add Course</h4>
+	</div>
+	<div class="modal-body">
+		<form action="/web/courses/" method="post" class="form-group">
+			<div class="row">
+				<div class="col-md-6">
+					<label for="titleCourse">Title:</label>
+					<input type="text" name="title" id="titleCourse" class="form-control" placeholder="Title..">
+				</div>
+				<div class="col-md-6">
+					<label for="argumentCourse">Argument:</label>
+					<input type="text" name="argument" id="argumentCourse" class="form-control" placeholder="Main argument..">
+				</div>
+				<div class="col-md-12">
+					<label for="titleCourse">Description:</label>
+					<textarea rows="4" name="description" id="descriptionCourse" class="form-control" placeholder="Short description.."></textarea>
+				</div>
+				<div class="col-md-5">
+					<label for="titleCourse">Start:</label>
+					<input type="datetime-local" name="startCourse" id="startCourse" class="form-control">
+				</div>
+				<div class="col-md-5 col-md-offset-2">
+					<label for="argumentCourse">End:</label>
+					<input type="datetime-local" name="endCourse" id="endCourse" class="form-control">
+				</div>
+			</div>
+			<br>
+			<div class="modal-footer">
+			  <button type="reset" class="btn btn-danger" >Reset</button>
+			  <button type="submit" class="btn btn-success" >Submit</button>
+			</div>
+		</form>
+	</div>
+  </div>
+
+</div>
+</div>
+
+
+<!-- Modal Lecture -->
+<div class="modal fade" id="myLecture" role="dialog">
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content" style="margin-top: 60px;">
+	<div class="modal-header">
+	  <button type="button" class="close" data-dismiss="modal">&times;</button>
+	  <h4 class="modal-title">Add Lecture</h4>
+	</div>
+	<div class="modal-body">
+	  <form action="/web/courses/" method="post" class="form-group">
+			<div class="row">
+				<div class="col-md-6">
+					<label for="courseLecture">Course:</label>
+					<select name="courses" id="courseLecture">
+						<option selected="true" disabled="disabled">--Select Course--</option>
+						<option value="ciccia">Ciccia</option>
+						<option value="puzza">Puzza</option>
+						<option value="molla">Molla</option>
+						<!-- loop on course passed context-->
+					</select>
+				</div>
+				<div class="col-md-6">
+					<label for="guestLecture">Guest:</label>
+					<select name="guests" id="guestLecture">
+						<option selected="true" disabled="disabled">--Select Guest--</option>
+					</select>
+				</div>
+				<div class="col-md-6">
+					<label for="themeLecture">Theme:</label>
+					<input type="text" name="theme" id="themeLecture" class="form-control" placeholder="Main theme..">
+				</div>
+				<div class="col-md-12">
+					<label for="descriptionLecture">Description:</label>
+					<textarea rows="4" name="description" id="descriptionLecture" class="form-control" placeholder="Short description.."></textarea>
+				</div>
+				<div class="col-md-3">
+					<label for="durationLecture">Duration(hours):</label>
+					<input type="number" name="duration" id="durationLecture" class="form-control">
+				</div>
+				<div class="col-md-5 col-md-offset-4">
+					<label for="argumentCourse">Date:</label>
+					<input type="datetime-local" name="dateLecture" id="dateLecture" class="form-control">
+				</div>
+			</div>
+			<br>
+			<div class="modal-footer">
+			  <button type="reset" class="btn btn-danger" >Reset</button>
+			  <button type="submit" class="btn btn-success" >Submit</button>
+			</div>
+		</form>
+	</div>
+  </div>
+
+</div>
+</div>
+
 {% endblock %}
