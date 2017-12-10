@@ -40,6 +40,7 @@ class Customer(models.Model):
     role = models.CharField(max_length=50, choices=CUSTOMER_ROLE_OPTIONS, blank=False, null=False, default='user')
     allow_booking = models.BooleanField(default=True)
     count_disclaimer = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(5)])
+    count_booking = models.IntegerField(default=0)
     disable_date = models.DateTimeField(blank=True, null=True)
     enable_date = models.DateTimeField(blank=True, null=True)
 
@@ -54,6 +55,9 @@ class Lecture(models.Model):
     description = models.TextField(max_length=500, blank=True, null=True)
     duration = models.DecimalField(decimal_places=2, max_digits=3, blank=True, null=True)  # in hours
     lecture_date = models.DateTimeField()
+    max_attendees = models.IntegerField(blank=False, null=False)
+    booked_participants = models.IntegerField(default=0)
+
 
     def __str__(self):
         return "%s" % self.theme

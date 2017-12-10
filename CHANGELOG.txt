@@ -95,9 +95,16 @@ Frontend view lecture, course
 --------------------------------------------------
 
 
-Released: 09/12/2017 h12:48
-edit datamodel
+Released: not yet
+Big release
 # booking
 # subscribtion
+# user booking following type deal
+# lock/unlock undesired customer
+# lock customer(24h)
+# user dismissing lecture
+# dismiss == 2 customer.locked(default=False) = True
+# number of customers per lectures
+
 --------------------------------------------------
 

@@ -1,10 +1,7 @@
-# user booking following type deal
-- lock/unlock undesired customer
-- lock customer(24h)
-- user dismissing lecture
-- dismiss == 2 customer.locked(default=False) = True
-- number of customers per lectures
 - cancel lecture (at least 2hour ago of lecture.started_at) if not 3 customer.type_customer == alumn < 3
 - edit planning of course
 - news in the dashboard page
 - show hide feature if admin or teacher
+- add event that unlock customer after 24hours feature
+- add only 1 subscription per lecture feature
+- at the end of week reset customer.count_booking
