@@ -58,7 +58,6 @@ class Lecture(models.Model):
     max_attendees = models.IntegerField(blank=False, null=False)
     booked_participants = models.IntegerField(default=0)
 
-
     def __str__(self):
         return "%s" % self.theme
 

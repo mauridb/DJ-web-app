@@ -38,12 +38,11 @@ def lecture_detail(request, pk):
 
 
 def booking(request, pk):
-    print request, pk
     customer = Customer.objects.get(web_user=request.user)
     lecture = Lecture.objects.get(pk=pk)
 
     if request.method == 'POST':
-        if request.POST.get('booking') and customer.allow_booking is True and customer.count_booking <= customer.subscription.time_booking:
+        if request.POST.get('booking') and customer.allow_booking is True and customer.count_booking < customer.subscription.time_booking:
             # handle booking on lecture max participants
             if lecture.booked_participants < lecture.max_attendees:
                 lecture.booked_participants += 1
