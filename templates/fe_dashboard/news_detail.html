@@ -1,0 +1,8 @@
+{% extends "fe_dashboard/_layout.html" %}
+
+{% block body_content %}
+<h1>{{ news.title}}</h1>
+<hr>
+<h3 class="muted">Title: <small>{{ news.title }}</small></h3>
+<p>{{ news.description }}</p>
+{% endblock %}

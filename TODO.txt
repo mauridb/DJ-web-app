@@ -1,17 +1,3 @@
-Admin:
-# modificare orari/giorni dei corsi
-# decidere il numero di clienti per lezione
-# bloccare/sbloccare clienti indesiderati
-- inserire avvisi ad inizio pagina
-
-Cliente:
-# prenotare N lezioni in base al tipo di abbonamento
-# disdire al massimo 2 lezioni a settimana
-
-Sistema:
-# bloccare per 24h clienti che disdicono più di 2 volte
-# annullare automaticamente la lezione (due ore prima almeno usando un intervallo di 15minuti tra 2ore e 2ore e 15) se non c'è il numero minimo di 3 persone segnate in una determinata fascia oraria
-    # parsing date
-    # datamodel edit is_available and null value for lecture date
-
+- improve frontend please
+- rest service or news
 - deploy on aws?

@@ -1,0 +1,19 @@
+{% extends "fe_dashboard/_layout.html" %}
+{% load static from staticfiles %}
+{% load news_tags %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/icons.css' %}">
+{% endblock %}
+
+{% block body_content %}
+<h1 class="page-header">Dashboard [<small>{{request.user.first_name|title}} {{request.user.last_name|title}}</small>]</h1>
+<div>
+	<h2>News</h2>
+</div>
+<div class="row placeholders">
+	{% for n in news %}
+		{% news_avatar n %}
+	{% endfor %}
+</div>
+{% endblock %}

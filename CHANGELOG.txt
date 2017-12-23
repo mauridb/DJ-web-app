@@ -111,3 +111,9 @@ Big release
 # multiple database: sqlite3 for development sessions, postgresql for production stable sessions
 --------------------------------------------------
 
+
+Released: 23/12/2017 h23:00
+News
+# listing news feature
+--------------------------------------------------
+

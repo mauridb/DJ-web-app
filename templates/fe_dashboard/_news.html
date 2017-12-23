@@ -1,0 +1,6 @@
+<div class="col-xs-6 col-sm-3 placeholder">
+	<a href="{% url 'web:detail-news' news.pk %}">
+		<i class="avatar avatar-lg avatar-color-{{ num }} avatar-letter-{{ news.title.0|lower }} rounded"></i>
+		<h4>{{ news.title }}</h4>
+	</a>
+</div>

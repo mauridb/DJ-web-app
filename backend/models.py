@@ -70,3 +70,15 @@ class Booking(models.Model):
 
     def __str__(self):
         return "{}_{}_{}_{}".format(self.pk, self.customer, self.lecture, self.booking_date)
+
+
+class News(models.Model):
+    title = models.CharField(max_length=100, blank=False, null=False)
+    description = models.TextField(max_length=500, blank=False, null=False)
+    news_date = models.DateTimeField()
+
+    def __str__(self):
+        return "{}_{}".format(self.title, self.news_date)
+
+    class Meta:
+        verbose_name_plural = "News"

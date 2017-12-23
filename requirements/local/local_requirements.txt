@@ -4,3 +4,4 @@ django-filter
 fabric
 psycopg2
 django-grappelli
+schedule

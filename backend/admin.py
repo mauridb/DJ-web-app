@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import Customer, Lecture, Course, Subscription, Booking
+from .models import Customer, Lecture, Course, Subscription, Booking, News
 
 
 class CustomerAdmin(admin.ModelAdmin):
@@ -17,5 +17,6 @@ admin.site.register(Lecture)
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Subscription)
 admin.site.register(Booking)
+admin.site.register(News)
 
 

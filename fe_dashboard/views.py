@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from datetime import datetime, timedelta
 
 from django.shortcuts import render, get_object_or_404, redirect
-from backend.models import Course, Lecture, Customer
+from backend.models import Course, Lecture, Customer, News
 
 
 def home(request):
@@ -35,6 +35,18 @@ def lecture_list(request):
 def lecture_detail(request, pk):
     lecture = get_object_or_404(Lecture, pk=pk)
     return render(request, 'fe_dashboard/lecture_detail.html', {'lecture': lecture})
+
+
+def news_list(request):
+    news = News.objects.all()
+    print request.method
+
+    return render(request, 'fe_dashboard/news_list.html', {'news': news})
+
+
+def news_detail(request, pk):
+    news = get_object_or_404(News, pk=pk)
+    return render(request, 'fe_dashboard/news_detail.html', {'news': news})
 
 
 def booking(request, pk):
