@@ -95,16 +95,19 @@ Frontend view lecture, course
 --------------------------------------------------
 
 
-Released: not yet
+Released: 23/12/2017 h20:45
 Big release
 # booking
-# subscribtion
+# subscription
 # user booking following type deal
 # lock/unlock undesired customer
 # lock customer(24h)
 # user dismissing lecture
 # dismiss == 2 customer.locked(default=False) = True
 # number of customers per lectures
-
+# datamodel edits: lecture.is_available, lecture.lecture_date as a null field
+# cronjob scheduled when launch reset_schedule.py
+# created django commands checklectures and resetbooking
+# multiple database: sqlite3 for development sessions, postgresql for production stable sessions
 --------------------------------------------------
 
