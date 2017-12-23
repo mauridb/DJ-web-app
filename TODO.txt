@@ -1,17 +1,8 @@
-- at the end of week reset customer.count_booking
-- cancel lecture (at least 2hour ago of lecture.started_at) if not 3 customer.type_customer == alumn < 3
-- edit planning of course
-- news in the dashboard page
-- show hide feature if admin or teacher
-- add event that unlock customer after 24hours feature
-- add only 1 subscription per lecture feature
-
-
 Admin:
 # modificare orari/giorni dei corsi
 # decidere il numero di clienti per lezione
-- inserire avvisi ad inizio pagina
 # bloccare/sbloccare clienti indesiderati
+- inserire avvisi ad inizio pagina
 
 Cliente:
 # prenotare N lezioni in base al tipo di abbonamento
@@ -19,4 +10,8 @@ Cliente:
 
 Sistema:
 # bloccare per 24h clienti che disdicono più di 2 volte
-- annullare automaticamente la lezione (due ore prima almeno) se non c'è il numero minimo di 3 persone segnate in una determinata fascia oraria
+# annullare automaticamente la lezione (due ore prima almeno usando un intervallo di 15minuti tra 2ore e 2ore e 15) se non c'è il numero minimo di 3 persone segnate in una determinata fascia oraria
+    # parsing date
+    # datamodel edit is_available and null value for lecture date
+
+- deploy on aws?
